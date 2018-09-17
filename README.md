@@ -26,7 +26,10 @@ Once you are logged in, clone this repository as a new project in RStudio Server
 
 ![](img/rstudio_server_config_clone.gif)
 
-After the repository is cloned, you should see a files in the file browser window in the lower right of RStudio Server.
+After the repository is cloned, you should see the following files in the file browser window in the lower right of RStudio Server.
+
+![](img/rstudio_files.png)
+
 Confirm that a file named `config_rstudio_server.R` is visible in that window, then type the following in the R Console window:
 
 ```r
@@ -49,6 +52,9 @@ When you run the above function, you will see input prompts asking for the follo
 Input your information and verify that it is correct, then wait for the configuration and installation procedure to complete, which will take a few minutes.
 
 Once the installation procedure is complete, click the red button — it says **Quit the current R session** if you hover your mouse over it — on the upper right of the page to refresh RStudio Server.
+
+![](img/rstudio_red_button.png)
+
 RStudio Server is now configured for use in CDS 101!
 
 License
