@@ -1,0 +1,28 @@
+Title: First-time RStudio Server Configuration
+Depends:
+  R (>= 3.5)
+Imports:
+  broom (>= 0.5.0),
+  dplyr (>= 0.7.6),
+  forcats (>= 0.3.0),
+  ggplot2 (>= 3.0.0),
+  gridExtra (>= 2.3),
+  infer (>= 0.3.1),
+  kableExtra (>= 0.9.0),
+  lubridate (>= 1.7.4),
+  modelr (>= 0.1.2),
+  purrr (>= 0.2.5),
+  readr (>= 1.1.1),
+  robotstxt (>= 0.6.0),
+  rvest (>= 0.3.2),
+  stringr (>= 1.3.1),
+  tidyr (>= 0.8.1),
+  tidyverse (>= 1.2.1),
+  xaringan (>= 0.7)
+Remotes:
+  rstudio/rmarkdown,
+  tidymodels/infer,
+  tidyverse/ggplot2,
+  tidyverse/tidyverse,
+  yihui/xaringan
+
