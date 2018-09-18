@@ -1,15 +1,15 @@
 #!/usr/bin/env Rscript
 
-configure_rstudio <- function(threads = 4) {
+configure_rstudio <- function() {
   setup_mode <- choose_setup_mode()
   if (setup_mode == 1) {
     user_info <- get_user_info()
-    install_usethis_and_remotes_pkgs(threads = threads)
+    install_usethis_and_remotes_pkgs()
     configure_renviron()
     configure_git(user_info$user_name, user_info$user_email)
     tell_user_to_restart_session()
   } else if (setup_mode == 2) {
-    install_course_dependencies(threads = threads)
+    install_course_dependencies()
   }
 }
 
@@ -115,11 +115,10 @@ configure_git <- function(user_name, user_email) {
   )
 }
 
-install_usethis_and_remotes_pkgs <- function(threads) {
+install_usethis_and_remotes_pkgs <- function() {
   install.packages(
     pkgs = c("usethis", "remotes"),
-    repos = "https://cran.rstudio.com",
-    Ncpus = threads
+    repos = "https://cran.rstudio.com"
   )
 }
 
@@ -140,8 +139,8 @@ tell_user_to_restart_session <- function() {
   )
 }
 
-install_course_dependencies <- function(threads) {
-  remotes::install_deps(threads = threads)
+install_course_dependencies <- function() {
+  remotes::install_deps(threads = 4)
 }
 
 # Helpers --------------------------------------------------------------------
