@@ -130,8 +130,8 @@ tell_user_to_restart_session <- function() {
   )
   todo(
     "Resume setup after the restart by reloading the ",
-    "{code(configure-rstudio-server)} project, and then sourcing the ",
-    "{code(config_rstudio_server.R)} file:"
+    "configure-rstudio-server project, and then sourcing the ",
+    "config_rstudio_server.R file:"
   )
   code_block("source(\"config_rstudio_server.R\")", copy = FALSE)
   todo(
