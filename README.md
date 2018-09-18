@@ -63,7 +63,8 @@ Input your information and verify that it is correct, then wait for the first-ti
 You will then see the following message:
 
     🔴 Restart RStudio Server session by clicking the Red Button in the upper right-hand corner.
-    🔴 Resume setup after the restart by running:
+    🔴 Resume setup after the restart by reloading the configure-rstudio-server project, and then 
+       sourcing the config_rstudio_server.R file:
        source("config_rstudio_server.R")
     🔴 Select setup option '2' to install packages needed for CDS 101.
 
@@ -71,7 +72,11 @@ Restart the session as instructed by pressing the red button.
 
 ![](img/rstudio_red_button.png)
 
-After the restart is complete, resume the installation by running `source("config_rstudio_server.R")` and entering <kbd>2</kbd>.
+After the restart is complete, reload the `configure-rstudio-server` project.
+
+![](img/reload_configure-restudio-server_project.png)
+
+After the project finishes loading, resume the installation by running `source("config_rstudio_server.R")` in the Console window and entering <kbd>2</kbd>.
 This will start the process of downloading and installing the packages you'll need for the course, which will take a while.
 At this point you can close your browser tab, as the installation will continue in the background.
 Once all the packages are successfully installed, RStudio Server will be ready to use in CDS 101!

@@ -128,7 +128,11 @@ tell_user_to_restart_session <- function() {
     "Restart RStudio Server session by clicking the Red Button in the ",
     "upper right-hand corner."
   )
-  todo("Resume setup after the restart by running:")
+  todo(
+    "Resume setup after the restart by reloading the ",
+    "{code(configure-rstudio-server)} project, and then sourcing the ",
+    "{code(config_rstudio_server.R)} file:"
+  )
   code_block("source(\"config_rstudio_server.R\")", copy = FALSE)
   todo(
     "Select setup option {value(2)} to install packages needed for ",
