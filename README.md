@@ -1,5 +1,5 @@
-First-time RStudio Server Configuration
-=======================================
+RStudio Server Configuration
+============================
 
 Overview
 --------
@@ -22,7 +22,7 @@ Instructions
 
 Navigate to RStudio Server at <https://rstudio.cos.gmu.edu> and login using your NetID and password.
 If you cannot login, please post a message in the [\#r-rstudio-github-help](https://masoncds101.slack.com/messages/CASUNTFNX) Slack channel.
-Once you are logged in, clone this repository as a new project in RStudio Server by clicking on the **New Project** button, then **Version Control**, then **Git**, and then paste <https://github.com/mason-fa18-cds-101-dl1/configure-rstudio-server.git> into the *Repository URL* box, and finally click **Create Project**.
+Once you are logged in, clone this repository as a new project in RStudio Server by clicking on the **New Project** button, then **Version Control**, then **Git**, and then paste `https://github.com/mason-fa18-cds-101-dl1/configure-rstudio-server.git` into the *Repository URL* box, and finally click **Create Project**.
 
 ![](img/rstudio_server_config_clone.gif)
 
@@ -43,19 +43,38 @@ Next, type the following in the R Console to begin the configuration procedure:
 configure_rstudio()
 ```
 
-When you run the above function, you will see input prompts asking for the following information:
+When you run the above function, you will see the following input prompt:
+
+    RStudio Server setup options
+    
+      1. First-time setup
+      2. Install packages for CDS 101
+      
+    Enter setup option:
+    
+If this is the first-time you're running `configure_rstudio()`, input <kbd>1</kbd> and press <kbd>Enter</kbd>.
+You'll then be asked for the following information:
 
     Enter your first name:
     Enter your last name:
     Enter your email address:
 
-Input your information and verify that it is correct, then wait for the configuration and installation procedure to complete, which will take a few minutes.
+Input your information and verify that it is correct, then wait for the first-time setup to complete.
+You will then see the following message:
 
-Once the installation procedure is complete, click the red button — it says **Quit the current R session** if you hover your mouse over it — on the upper right of the page to refresh RStudio Server.
+    🔴 Restart RStudio Server session by clicking the Red Button in the upper right-hand corner.
+    🔴 Resume setup after the restart by running:
+       source("config_rstudio_server.R")
+    🔴 Select setup option '2' to install packages needed for CDS 101.
+
+Restart the session as instructed by pressing the red button.
 
 ![](img/rstudio_red_button.png)
 
-RStudio Server is now configured for use in CDS 101!
+After the restart is complete, resume the installation by running `source("config_rstudio_server.R")` and entering <kbd>2</kbd>.
+This will start the process of downloading and installing the packages you'll need for the course, which will take a while.
+At this point you can close your browser tab, as the installation will continue in the background.
+Once all the packages are successfully installed, RStudio Server will be ready to use in CDS 101!
 
 License
 -------
